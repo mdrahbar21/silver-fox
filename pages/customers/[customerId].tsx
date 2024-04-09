@@ -60,7 +60,7 @@ const SingleShopifyCustomer = () => {
             )}
             <div>
             <AddressUpdateForm 
-                customerId={customerId.toString()} 
+                customerId={customerId ? customerId.toString(): ''} 
                 addressId={customer?.address?.id || ''} />
             </div>
           </>

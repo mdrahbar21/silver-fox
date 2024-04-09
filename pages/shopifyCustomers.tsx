@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { List, Sheet, Typography } from '@mui/joy';
-import Header from './components/header'; 
-import {Main} from './components/layout'; 
+import Header from '../components/header'; 
+import {Main} from '../components/layout'; 
 import Link from 'next/link';
 
 interface Customer {

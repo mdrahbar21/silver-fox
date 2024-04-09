@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios'; 
-import { AddressData, AddressUpdateFormProps } from './addressUpdateFormProps';
+import { AddressData, AddressUpdateFormProps } from '../types/addressUpdateFormProps';
 
 const AddressUpdateForm: React.FC<AddressUpdateFormProps> = ({ customerId, addressId }) => {
   const [addressData, setAddressData] = useState<AddressData>({

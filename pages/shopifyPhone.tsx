@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { GridComponent, ColumnDirective, ColumnsDirective, Resize, Sort, Selection, Search, ContextMenu, Filter, Page, ExcelExport, PdfExport, Edit, Inject, Toolbar } from '@syncfusion/ej2-react-grids';
-import Header from './components/header';
+import Header from '../components/header';
 
 interface Customer {
     name: string;

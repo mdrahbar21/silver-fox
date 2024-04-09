@@ -2,9 +2,9 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useRouter } from 'next/router';
 import { Typography } from '@mui/joy'; 
-import Header from '../components/header'; 
-import { Main } from '../components/layout'; 
-import AddressUpdateForm from '../components/addressUpdateForm';
+import Header from '../../components/header'; 
+import { Main } from '../../components/layout'; 
+import AddressUpdateForm from '../../components/addressUpdateForm';
 
 interface Customer {
   id: string; 

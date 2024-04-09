@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useRouter } from 'next/router';
 import { Typography, Button } from '@mui/joy';
-import Header from '../components/header';
-import {Main} from '../components/layout';
+import Header from '../../components/header';
+import {Main} from '../../components/layout';
 
 interface LineItem {
   name: string;

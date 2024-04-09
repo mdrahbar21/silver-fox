@@ -3,7 +3,7 @@ import axios from 'axios';
 import { useRouter } from 'next/router';
 import { Typography } from '@mui/joy'; 
 import Header from '../components/header'; 
-import Layout from '../components/layout'; 
+import { Main } from '../components/layout'; 
 import AddressUpdateForm from '../components/addressUpdateForm';
 
 interface Customer {
@@ -48,7 +48,7 @@ const SingleShopifyCustomer = () => {
   return (
     <div>
       <Header title="Shopify Customer Details" />
-      <Layout.Main>
+      <Main>
         {customer ? (
           <>
             <Typography>{customer.name}</Typography>
@@ -67,7 +67,7 @@ const SingleShopifyCustomer = () => {
         ) : (
           <Typography>Loading customer details...</Typography>
         )}
-      </Layout.Main>
+      </Main>
     </div>
   );
 };

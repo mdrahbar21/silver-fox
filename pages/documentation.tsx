@@ -27,7 +27,7 @@ const DocumentationPage = () => {
           {/* Project Overview */}
           <Typography level="h2" sx={{ marginBottom: 1 }}>Overview</Typography>
           <Typography component="div" level="body-md" sx={{ marginBottom: 2 }}>
-            This project integrates with the Shopify API to manage customer addresses, retrieve customer orders, and cancel specific orders. It's built with Next.js, TypeScript, and Joy-UI for a modern, responsive user experience.
+            This project integrates with the Shopify API to manage customer addresses, retrieve customer orders, and cancel specific orders. It&apos;s built with Next.js, TypeScript, and Joy-UI for a modern, responsive user experience.
           </Typography>
 
             {/* Shopify Store Info */}

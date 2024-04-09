@@ -3,7 +3,7 @@ import axios from 'axios';
 import { useRouter } from 'next/router';
 import { Typography, Button } from '@mui/joy';
 import Header from '../components/header';
-import Layout from '../components/layout';
+import {Main} from '../components/layout';
 
 interface LineItem {
   name: string;
@@ -57,7 +57,7 @@ const OrderDetailsPage = () => {
   return (
     <div>
       <Header title="Shopify Order Details" />
-      <Layout.Main>
+      <Main>
         {orderDetails ? (
           <>
             <Typography level="h4">Order: {orderDetails.name}</Typography>
@@ -74,7 +74,7 @@ const OrderDetailsPage = () => {
         ) : (
           <Typography>Loading order details...</Typography>
         )}
-      </Layout.Main>
+      </Main>
     </div>
   );
 };

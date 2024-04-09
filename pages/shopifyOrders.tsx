@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { List, Sheet, Typography } from '@mui/joy';
 import Header from './components/header'; 
-import Layout from './components/layout'; 
+import { Main } from './components/layout';
 import Link from 'next/link';
 
 interface LineItem {
@@ -39,7 +39,7 @@ const ShopifyOrders = () => {
   return (
     <div className="m-2 rounded-3xl bg-white p-2 md:m-10 md:p-10">
       <Header title="Shopify Orders" />
-      <Layout.Main>
+      <Main>
         <List sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
           {orders.map((order, index) => (
             <Sheet
@@ -68,7 +68,7 @@ const ShopifyOrders = () => {
             </Sheet>
           ))}
         </List>
-      </Layout.Main>
+      </Main>
     </div>
   );
 };

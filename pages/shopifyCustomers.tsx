@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { List, Sheet, Typography } from '@mui/joy';
 import Header from './components/header'; 
-import Layout from './components/layout'; 
+import {Main} from './components/layout'; 
 import Link from 'next/link';
 
 interface Customer {
@@ -34,7 +34,7 @@ const ShopifyCustomers = () => {
   return (
     <div className="m-2 rounded-3xl bg-white p-2 md:m-10 md:p-10">
       <Header title="Shopify Customers" />
-      <Layout.Main>
+      <Main>
         <List sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
           {customers.map((customer, index) => (
             <Sheet
@@ -56,7 +56,7 @@ const ShopifyCustomers = () => {
             </Sheet>
           ))}
         </List>
-      </Layout.Main>
+      </Main>
     </div>
   );
 };

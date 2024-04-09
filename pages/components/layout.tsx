@@ -1,8 +1,19 @@
 import * as React from 'react';
-import Box, { BoxProps } from '@mui/joy/Box';
+import Box from '@mui/joy/Box';
 import Sheet from '@mui/joy/Sheet';
 
-function Root(props: any) {
+interface CommonProps {
+  sx?: any; 
+  children: React.ReactNode; 
+  onClose?: () => void; 
+}
+
+interface MainProps {
+  children: React.ReactNode; 
+  sx?: any;
+}
+
+const Root: React.FC<CommonProps> = (props) => {
   return (
     <Box
       {...props}
@@ -22,13 +33,12 @@ function Root(props: any) {
       ]}
     />
   );
-}
+};
 
-function Header(props: any) {
+const Header: React.FC<CommonProps> = (props) => {
   return (
     <Box
       component="header"
-      className="Header"
       {...props}
       sx={[
         {
@@ -50,13 +60,12 @@ function Header(props: any) {
       ]}
     />
   );
-}
+};
 
-function SideNav(props: any) {
+const SideNav: React.FC<CommonProps> = (props) => {
   return (
     <Box
       component="nav"
-      className="Navigation"
       {...props}
       sx={[
         {
@@ -73,12 +82,11 @@ function SideNav(props: any) {
       ]}
     />
   );
-}
+};
 
-function SidePane(props: any) {
+const SidePane: React.FC<CommonProps> = (props) => {
   return (
     <Box
-      className="Inbox"
       {...props}
       sx={[
         {
@@ -94,23 +102,19 @@ function SidePane(props: any) {
       ]}
     />
   );
-}
+};
 
-function Main(props: any) {
+const Main: React.FC<MainProps> = (props) => {
   return (
     <Box
       component="main"
-      className="Main"
       {...props}
       sx={[{ p: 2 }, ...(Array.isArray(props.sx) ? props.sx : [props.sx])]}
     />
   );
-}
+};
 
-function SideDrawer(
-  props: any
-) {
-  const { onClose, ...other } = props;
+const SideDrawer: React.FC<CommonProps> = ({ onClose, ...other }) => {
   return (
     <Box
       {...other}
@@ -143,13 +147,6 @@ function SideDrawer(
       </Sheet>
     </Box>
   );
-}
-
-export default {
-  Root,
-  Header,
-  SideNav,
-  SidePane,
-  SideDrawer,
-  Main,
 };
+
+export { Root, Header, SideNav, SidePane, SideDrawer, Main };

@@ -39,6 +39,13 @@ const pages: PageData[] = [
     link: "/shopifyOrders",
     buttontext: "Read Description",
   },
+  {
+    id: 5,
+    title: "Task phoneNumber",
+    description: "Input Phone Number to get details of all orders associated with the phoneNumber",
+    link: "/orders/phoneNumber",
+    buttontext: "Visit Page",
+  },
 ];
 
 

@@ -56,6 +56,7 @@ const DocumentationPage = () => {
                 <ListItem><strong>Parameters: </strong> customerId, addressId</ListItem>
                 <ListItem><strong>Payload: </strong> JSON object containing address details such as address1, city, province, country, zip, etc.</ListItem>
               </List>
+              
               <Typography level="h4">All Order List</Typography>
               <List component="ul" marker='circle' sx={{ marginBottom: 2 }}>
                 <ListItem><strong>Endpoint:</strong> /api/orders/route</ListItem> 
@@ -76,7 +77,15 @@ const DocumentationPage = () => {
                 <ListItem><strong>Method:</strong> POST</ListItem>
                 <ListItem><strong>Description:</strong>Cancel the specified order and confirm the successful cancellation.</ListItem>
                 <ListItem><strong>Parameters: </strong> orderId</ListItem>
-              </List>          
+              </List>   
+              <Typography level="h4">Order details related to a specific phone number</Typography>  
+              <List component="ul" marker='circle' sx={{ marginBottom: 2 }}>
+                <ListItem><strong>Endpoint:</strong> /api/addresses/orders/route</ListItem> 
+                <ListItem><strong>Method:</strong> POST</ListItem>
+                <ListItem><strong>Description:</strong> This API allows you to fetch detailed orders of a specific customer based on their phone number from a Shopify store</ListItem>
+                <ListItem><strong>Parameters: </strong> phoneNumber</ListItem>
+                <ListItem><strong>Payload: </strong> JSON object containing phoneNumber </ListItem>
+              </List>     
 
           {/* Pages Documentation */}
             <Typography level="h2" sx={{ marginBottom: 1 }}>Pages</Typography>
@@ -99,6 +108,11 @@ const DocumentationPage = () => {
               <List component="ul" marker='circle' sx={{ marginBottom: 2 }}>
                 <ListItem><strong>Path:</strong>/orders/:orderId</ListItem> 
                 <ListItem><strong>Description:</strong>Displays details of a specific order and also allows to <strong>cancel</strong> the Order</ListItem>
+              </List>  
+            <Typography level="h4">Orders identified by phoneNumber</Typography>
+              <List component="ul" marker='circle' sx={{ marginBottom: 2 }}>
+                <ListItem><strong>Path:</strong>/orders/phoneNumber</ListItem> 
+                <ListItem><strong>Description:</strong>Takes phoneNumber as input and displays details of all the orders associated with a phoneNumber</ListItem>
               </List>  
             <Typography level="h4">Home</Typography>
               <List component="ul" marker='circle' sx={{ marginBottom: 2 }}>

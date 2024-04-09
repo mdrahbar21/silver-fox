@@ -15,7 +15,7 @@ const IndexPage = () => {
   return (
     <div style={{ margin: '20px' }}>
         <h2>Enter Phone Number</h2>
-        <p>Enter a phone number with country code to view the customer's orders </p>
+        <p>Enter a phone number with country code to view the customer&apos;s orders </p>
       <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
         <TextField
           label="Phone Number"

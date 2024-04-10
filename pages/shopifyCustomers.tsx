@@ -4,6 +4,7 @@ import { List, Sheet, Typography } from '@mui/joy';
 import Header from '../components/header'; 
 import {Main} from '../components/layout'; 
 import Link from 'next/link';
+import IndexPage from './orders/phoneNumber';
 
 interface Customer {
   id: string; 
@@ -33,6 +34,7 @@ const ShopifyCustomers = () => {
 
   return (
     <div className="m-2 rounded-3xl bg-white p-2 md:m-10 md:p-10">
+      <IndexPage />
       <Header title="Shopify Customers" />
       <Main>
         <List sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>

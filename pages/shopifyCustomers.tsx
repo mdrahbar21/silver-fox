@@ -36,6 +36,7 @@ const ShopifyCustomers = () => {
     <div className="m-2 rounded-3xl bg-white p-2 md:m-10 md:p-10">
       <IndexPage />
       <Header title="Shopify Customers" />
+      <Typography level='body-sm'>To <strong>update</strong> the address click on the customer </Typography>
       <Main>
         <List sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
           {customers.map((customer, index) => (
@@ -59,6 +60,7 @@ const ShopifyCustomers = () => {
           ))}
         </List>
       </Main>
+      
     </div>
   );
 };

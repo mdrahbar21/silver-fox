@@ -1,12 +1,13 @@
 import axios from 'axios';
 
 export default async function handler(req, res) {
+    // const startTime = Date.now();
   if (req.method !== 'POST') {
     return res.status(405).end('Method Not Allowed');
   }
 
-  const { phoneNumber } = req.body; // Assuming you're sending a phone number in the request body
-  const shopUrl = process.env.SHOPIFY_STORE_URL;
+  const { phoneNumber } = req.body; 
+  const shopUrl = 'https://hoomanlab.myshopify.com';
   const accessToken = process.env.SHOPIFY_ADMIN_ACCESS_TOKEN;
 
   try {
@@ -36,7 +37,7 @@ export default async function handler(req, res) {
       // Concatenate address components into full_address
       const formatAddress = (address) => {
         return [address.address1, address.address2, address.city, address.province, address.country, address.zip]
-          .filter(part => part) // Remove undefined or empty parts
+          .filter(part => part) 
           .join(', ');
       };
 
@@ -52,6 +53,9 @@ export default async function handler(req, res) {
         }))
       };
     });
+    // const endTime = Date.now(); // Capture end time
+    // console.log(`Execution time: ${endTime - startTime}ms`);
+    // res.status(200).json({ message: 'Function executed successfully', duration: `${endTime - startTime}ms` });
 
     return res.status(200).json({ orders: filteredOrders });
 
@@ -59,4 +63,5 @@ export default async function handler(req, res) {
     console.error('Shopify API error:', error);
     return res.status(500).json({ error: 'Failed to process request' });
   }
+  
 }

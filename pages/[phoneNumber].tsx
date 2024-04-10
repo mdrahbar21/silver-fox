@@ -21,6 +21,7 @@ export interface LineItem {
   
   
   const CustomerOrders = () => {
+    const startTime = Date.now();
     const [orders, setOrders] = useState<Order[]>([]);
     const router = useRouter();
     const { phoneNumber } = router.query;
@@ -38,7 +39,7 @@ export interface LineItem {
   
       fetchOrders();
     }, [phoneNumber]);
-  
+    
     return (
       <div className="m-2 rounded-3xl bg-white p-2 md:m-10 md:p-10">
         <Header title="Customer Orders" />
@@ -67,8 +68,10 @@ export interface LineItem {
             <Typography level="body-md">No orders found for this phone number.</Typography>
           )}
         </Main>
+        
       </div>
     );
+    
   };
   
   export default CustomerOrders;

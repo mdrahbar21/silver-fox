@@ -8,7 +8,6 @@ const IndexPage = () => {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // Redirect to the dynamic route
     router.push(`/${phoneNumber}`);
   };
 
